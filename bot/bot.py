@@ -69,23 +69,24 @@ def append_json_field(file_path, data):
     ##endwith
     return True;  # Confirm successful write
 ##end
+import logging
 def print_err(e):
-    print(f"\033[1;31m[ ERROR ]: {e}\033[0m"); #red
+    logging.info(f"\033[1;31m[ ERROR ]: {e}\033[0m"); #red
 ##end
 def print_warn(e):
-    print(f"\033[1;33m[ WARNING ]: {e}\033[0m"); #yellow
+    logging.info(f"\033[1;33m[ WARNING ]: {e}\033[0m"); #yellow
 ##end
 def print_debug2(e):
-    print(f"\033[95m[ DEBUG ]: {e}\033[0m"); # purple2
+    logging.info(f"\033[95m[ DEBUG ]: {e}\033[0m"); # purple2
 ##end
 def print_debug(e):
-    print(f"\033[35m[ DEBUG ]: {e}\033[0m"); # purple1
+    logging.info(f"\033[35m[ DEBUG ]: {e}\033[0m"); # purple1
 ##end
 def print_info2(e):
-    print(f"\033[1;34m[ INFO ]: {e}\033[0m"); #blue
+    logging.info(f"\033[1;34m[ INFO ]: {e}\033[0m"); #blue
 ##end
 def print_info(e):
-    print(f"[ INFO ]: {e}"); #white
+    logging.info(f"[ INFO ]: {e}"); #white
 ##end
 def sendRequest(url,auth):
     heads={
