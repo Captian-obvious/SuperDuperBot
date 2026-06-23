@@ -410,7 +410,7 @@ async def echo(ctx, message: str):
     try:
         message = re.sub(r"\$\{?[A-Za-z0-9_]+}?|\%[A-Za-z0-9_]+\%", "** **",message);
         if isinstance(ctx.channel, discord.DMChannel):
-            await ctx.reply(message);
+            await ctx.reply("You Cannot use echo outside of a server");
         else:
             if ctx.author.guild_permissions.manage_guild:
                 await ctx.reply(message);
