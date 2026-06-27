@@ -1087,9 +1087,13 @@ async def unmute_slash(interaction: discord.Interaction, member: discord.Member,
         await interaction.response.send_message('An error occured while running the command `--unmute 003--`');
     ##endtry
 ##end
-@bot.command(name="asset",help="get asset info")
+@bot.command(name="asset",help="Gets the asset metadata and content of a Roblox Asset")
 async def asset(ctx, assetId:str,placeId:str):
     await ctx.reply("Asset Info:");
+##end
+@bot.tree.command(name="asset",description="Gets the asset metadata and content of a Roblox Asset")
+async def asset_slash(interaction: discord.Interaction, assetId:str,placeId:str):
+    await interaction.response.send_message("Asset info: ")
 ##end
 def runbot(token):
     bot.run(token);
