@@ -1088,7 +1088,7 @@ async def unmute_slash(interaction: discord.Interaction, member: discord.Member,
     ##endtry
 ##end
 @bot.command(name="asset",help="get asset info")
-async def asset(ctx, assetId:str):
+async def asset(ctx, assetId:str,placeId:str):
     await ctx.reply("Asset Info:");
 ##end
 def runbot(token):
