@@ -1087,6 +1087,10 @@ async def unmute_slash(interaction: discord.Interaction, member: discord.Member,
         await interaction.response.send_message('An error occured while running the command `--unmute 003--`');
     ##endtry
 ##end
+@bot.command(name="asset",help="get asset info")
+async def asset(ctx, assetId:str):
+    await ctx.reply("Asset Info:");
+##end
 def runbot(token):
     bot.run(token);
 ##end
