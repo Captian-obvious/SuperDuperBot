@@ -1062,7 +1062,7 @@ async def unmute(ctx, member: discord.Member,reason: str="No Reason provided"):
 ##end
 @commands.has_permissions(moderate_members=True)
 @bot.tree.command(name="unmute", description="Removes timeout from member (requires moderate-members permission)")
-async def unmute(interaction: discord.Interaction, member: discord.Member, reason:str="No Reason Provided"):
+async def unmute_slash(interaction: discord.Interaction, member: discord.Member, reason:str="No Reason Provided"):
     try:
         if not isinstance(interaction.channel, discord.DMChannel):
             if not interaction.user.guild_permissions.moderate_members:
